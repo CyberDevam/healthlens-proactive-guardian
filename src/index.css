@@ -6,68 +6,94 @@
 
 @layer base {
   :root {
-    /* Core Background & Text */
+    /* Core Background & Text - Enhanced with subtle gradients */
     --background: 0 0% 100%;
+    --background-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 14% 99%) 100%);
     --foreground: 213 31% 15%;
 
-    /* Component Backgrounds */
+    /* Component Backgrounds - Premium glass effect */
     --card: 0 0% 100%;
     --card-foreground: 213 31% 15%;
+    --card-premium: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(220 14% 99% / 0.8) 100%);
 
     --popover: 0 0% 100%;
     --popover-foreground: 213 31% 15%;
 
-    /* Brand Colors - Medical Blue & Teal */
+    /* Brand Colors - Sophisticated medical palette */
     --primary: 203 89% 53%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 203 89% 65%;
     --primary-dark: 203 89% 40%;
+    --primary-glow: 203 89% 53% / 0.15;
 
-    /* Secondary - Health Green */
+    /* Secondary - Luxurious health green */
     --secondary: 158 64% 52%;
     --secondary-foreground: 0 0% 100%;
     --secondary-light: 158 64% 65%;
     --secondary-dark: 158 64% 40%;
+    --secondary-glow: 158 64% 52% / 0.12;
 
-    /* Muted & Subtle */
+    /* Muted & Subtle - Refined grays */
     --muted: 213 27% 97%;
     --muted-foreground: 213 15% 50%;
+    --muted-dark: 213 27% 94%;
 
-    /* Accent - Wellness Purple */
+    /* Accent - Premium wellness purple */
     --accent: 258 90% 66%;
     --accent-foreground: 0 0% 100%;
+    --accent-light: 258 90% 76%;
+    --accent-glow: 258 90% 66% / 0.15;
 
-    /* Status Colors */
+    /* Status Colors - Medical grade */
     --success: 158 64% 52%;
     --success-foreground: 0 0% 100%;
+    --success-glow: 158 64% 52% / 0.12;
     
     --warning: 43 96% 56%;
     --warning-foreground: 213 31% 15%;
+    --warning-glow: 43 96% 56% / 0.12;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
+    --destructive-glow: 0 84% 60% / 0.12;
 
-    /* UI Elements */
+    /* UI Elements - Enhanced with premium touches */
     --border: 213 27% 92%;
+    --border-premium: linear-gradient(135deg, hsl(213 27% 92%) 0%, hsl(213 27% 88%) 100%);
     --input: 213 27% 96%;
     --ring: 203 89% 53%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--muted)), hsl(var(--background)));
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--accent)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(203 89% 45%) 25%, hsl(var(--accent)) 75%, hsl(258 90% 60%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--muted)) 0%, hsl(var(--background)) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1) 0%, hsl(0 0% 100% / 0.05) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 14% 99%) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(213 31% 15% / 0.05);
-    --shadow: 0 4px 6px -1px hsl(213 31% 15% / 0.1);
-    --shadow-md: 0 10px 15px -3px hsl(213 31% 15% / 0.1);
-    --shadow-lg: 0 25px 50px -12px hsl(213 31% 15% / 0.25);
-    --shadow-health: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    /* Premium Shadows - Multiple layers for depth */
+    --shadow-xs: 0 1px 2px 0 hsl(213 31% 15% / 0.03);
+    --shadow-sm: 0 1px 3px 0 hsl(213 31% 15% / 0.05), 0 1px 2px -1px hsl(213 31% 15% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(213 31% 15% / 0.07), 0 2px 4px -2px hsl(213 31% 15% / 0.05);
+    --shadow-md: 0 10px 15px -3px hsl(213 31% 15% / 0.08), 0 4px 6px -4px hsl(213 31% 15% / 0.05);
+    --shadow-lg: 0 25px 50px -12px hsl(213 31% 15% / 0.15), 0 0 0 1px hsl(213 31% 15% / 0.02);
+    --shadow-xl: 0 25px 50px -12px hsl(213 31% 15% / 0.25), 0 0 0 1px hsl(213 31% 15% / 0.05);
+    --shadow-health: 0 20px 40px -12px hsl(var(--primary) / 0.2), 0 8px 16px -8px hsl(var(--primary) / 0.1);
+    --shadow-premium: 0 32px 64px hsl(213 31% 15% / 0.12), 0 0 0 1px hsl(213 31% 15% / 0.02);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow)), 0 0 40px hsl(var(--primary-glow));
 
-    /* Animations */
+    /* Premium Blurs */
+    --blur-sm: blur(4px);
+    --blur: blur(8px);
+    --blur-md: blur(12px);
+    --blur-lg: blur(16px);
+    --blur-xl: blur(24px);
+
+    /* Enhanced Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elegant: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
     --radius: 0.75rem;
 
@@ -127,12 +153,110 @@
   }
 }
 
+/* Premium Components Layer */
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+
+  /* Premium hover effects */
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow hover:scale-[1.02];
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .hover-float {
+    @apply transition-all duration-500 hover:shadow-premium hover:-translate-y-2;
+  }
+
+  /* Premium gradients */
+  .bg-premium {
+    background: var(--gradient-card);
+  }
+
+  .bg-hero-premium {
+    background: var(--gradient-hero);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Enhanced spacing */
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+
+  .container-premium {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Premium typography */
+  .heading-premium {
+    @apply font-poppins font-bold tracking-tight;
+  }
+
+  .text-premium {
+    @apply font-inter font-medium;
+  }
+
+  /* Floating elements */
+  .float-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Premium borders */
+  .border-gradient {
+    @apply relative;
+  }
+
+  .border-gradient::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg p-[1px];
+    background: var(--border-premium);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  /* Enhanced scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/40;
   }
 }

@@ -59,32 +59,33 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-hero-premium section-padding">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20" />
+        <div className="container-premium relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-poppins font-bold text-white mb-6 leading-tight">
                 Detect Health Risks
-                <span className="block text-primary-light">Before They Happen</span>
+                <span className="block text-gradient bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent">Before They Happen</span>
               </h1>
               <p className="text-xl text-white/90 mb-8 leading-relaxed">
                 AI-powered early detection system that analyzes your symptoms, lifestyle, and wearable data 
                 to predict health risks and provide personalized recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8">
+                <Button asChild variant="premium" size="xl" className="text-lg px-8 shadow-glow">
                   <NavLink to="/assessment">
                     Start Health Assessment
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </NavLink>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 text-lg px-8">
+                <Button asChild variant="glass" size="xl" className="text-lg px-8">
                   <NavLink to="/about">Learn More</NavLink>
                 </Button>
               </div>
             </div>
-            <div className="animate-scale-in">
-              <img 
+            <div className="animate-scale-in hover-float">
+              <img
                 src={heroImage} 
                 alt="HealthLens AI Technology" 
                 className="rounded-2xl shadow-lg w-full h-auto"
@@ -95,8 +96,8 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-premium">
+        <div className="container-premium">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -116,10 +117,10 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding">
+        <div className="container-premium">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-foreground mb-4">
               Comprehensive Health Intelligence
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -130,7 +131,7 @@ const Home = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="hover:shadow-health transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+              <Card key={index} className="hover-lift glass-card text-center animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4">
                     {feature.icon}
@@ -149,11 +150,11 @@ const Home = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-premium">
+        <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-foreground mb-6">
                 Why Choose HealthLens?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
@@ -169,16 +170,16 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="glass-card rounded-2xl p-8 shadow-premium hover-glow">
               <div className="text-center">
                 <Activity className="h-16 w-16 text-primary mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-poppins font-bold text-foreground mb-4">
                   Start Your Health Journey Today
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   Join thousands of users who have already taken control of their health with HealthLens.
                 </p>
-                <Button asChild size="lg" className="w-full">
+                <Button asChild variant="premium" size="lg" className="w-full shadow-glow">
                   <NavLink to="/assessment">
                     Begin Free Assessment
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -191,19 +192,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+      <section className="section-padding bg-hero-premium">
+        <div className="max-w-4xl mx-auto text-center container-premium">
+          <h2 className="text-3xl lg:text-4xl font-poppins font-bold text-white mb-6">
             Ready to Transform Your Health?
           </h2>
           <p className="text-xl text-white/90 mb-8">
             Get started with your personalized health risk assessment in just 5 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8">
+            <Button asChild variant="premium" size="xl" className="shadow-glow">
               <NavLink to="/assessment">Start Assessment</NavLink>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10 text-lg px-8">
+            <Button asChild variant="glass" size="xl">
               <NavLink to="/dashboard">View Demo</NavLink>
             </Button>
           </div>
